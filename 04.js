@@ -15,7 +15,7 @@ let price = document.querySelectorAll('td.price')
 // et la il lis toute la ligne, je dois récupérer juste le nombre dans les balises.
 
 console.log(price)
-result = 0
+let result = 0
 function push() {
     // pour récupérer les valeurs du tableau je fait une boucle for
     for (var i = 0; i < price.length; i++){
@@ -26,26 +26,25 @@ function push() {
     alert(sum)
 };
 
-document.getElementById('mybtn').addEventListener("click", function() {
-    let myinput = document.getElementById('name').value;
-    console.log(myinput);
-    let mydesc = document.getElementById('description').value;
-    console.log(mydesc);
-    let myprice = document.getElementById("price").value;
-    console.log(myprice);
+updateTotal();
 
-    result = "Name: " + myinput + "\n" + "Descprition: " + mydesc + "\n" + "Price" + myprice
-    alert(result)
-})
-
-
-
-// =========== STEP 3 ===========
 let myInputs = document.getElementsByClassName("deleteCross"); 
 console.log(myInputs)
 for (let i = 0; i < myInputs.length; i++) {
     myInputs[i].addEventListener("click", function(){
         console.log(this)
         this.parentElement.parentElement.remove();
+        updateTotal();
 }) 
+}
+
+function updateTotal(){
+    let total = 0;
+    price = document.querySelectorAll('td.price')
+    for (var i = 0; i < price.length; i++){
+        text = price[i].textContent
+        total = parseFloat(text, 10) + parseFloat(total, 10)
+    }
+    document.getElementById("total").innerHTML = total.toFixed(2);
+
 }

@@ -3,6 +3,8 @@ let price = document.querySelectorAll('td.price')
 // je spécifie td pour présicer que je veux cet élément du tableau
 // et la il lis toute la ligne, je dois récupérer juste le nombre dans les balises.
 
+
+// }}}}}}}}STEP 2{{{{{{{{{{
 console.log(price)
 result = 0
 function push() {
@@ -23,20 +25,7 @@ document.getElementById('mybtn').addEventListener("click", function() {
     let myprice = document.getElementById("price").value;
     console.log(myprice);
 
-    result = "Name: " + myinput + "\n" + "Descprition: " + mydesc + "\n" + "Price" + myprice
+    result = "Name: " + myinput + "\n" + "Descprition: " + mydesc + "\n" + "Price :" + myprice
     alert(result)
 })
 
-let myInput = document.getElementsByName("deleteCross"); 
-for (let i = 0; i < myInput.length; i++) {
-    myInput[i].addEventListener("click", function(){
-        console.log(this)
-        this.parentElement.parentElement.
-        // console.log("ok !!") 
-}) 
-}
-
-
-document.getElementsByName("deleteCross").addEventListener("click", function(){
-    console.log(document.getElementsByName("deleteCross"))
-})

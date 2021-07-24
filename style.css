@@ -1,9 +1,20 @@
 body{
+    background-color: rgba(221, 221, 223, 0.623);
     margin: 10px 45px;
 }
 
-h1, h2{
+h1{
     text-align: center;
+    color: fuchsia;
+}
+h2{
+    text-align: center;
+    color: blueviolet
+}
+#total{
+    font-size: large;
+    color: fuchsia;
+
 }
 
 #mybtn{
