@@ -1,0 +1,12 @@
+body{
+    margin: 10px 45px;
+}
+
+h1, h2{
+    text-align: center;
+}
+
+#mybtn{
+    float: right;
+}
+

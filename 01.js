@@ -1,4 +1,4 @@
-// je suppose que dans mon tiroir price il y a lobjet price, ma class du html pour récupérer mes prix
+// je suppose que dans mon tiroir price il y a lobjet price, ma class html pour récupérer mes prix
 let price = document.querySelectorAll('td.price') 
 // je spécifie td pour présicer que je veux cet élément du tableau
 // et la il lis toute la ligne, je dois récupérer juste le nombre dans les balises.
